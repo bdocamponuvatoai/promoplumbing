@@ -1,0 +1,41 @@
+.page-intro {
+  background: linear-gradient(180deg, #f8faff, white);
+  max-width: none;
+}
+.page-intro > * {
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-intro h1 {
+  max-width: 1248px;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+}
+.page-intro > p:not(.eyebrow) {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 26px;
+  max-width: 720px;
+  margin-left: max(0px, calc((100% - 1248px) / 2));
+}
+.page-intro > .hero-actions {
+  max-width: 1248px;
+}
+@media (max-width: 760px) {
+  .page-intro h1 {
+    font-size: 3.5rem;
+  }
+  .page-intro > p:not(.eyebrow) {
+    font-size: 1.08rem;
+    max-width: 550px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .page-intro h1 {
+    font-size: 3rem;
+  }
+  .page-intro > p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+}

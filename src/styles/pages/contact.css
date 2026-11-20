@@ -1,0 +1,118 @@
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+.contact-copy {
+  position: sticky;
+  top: 135px;
+}
+.contact-copy h1 {
+  font-size: clamp(3.7rem, 5.3vw, 5.5rem);
+}
+.contact-copy > p:not(.eyebrow) {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  max-width: 380px;
+}
+.contact-options {
+  margin-top: 36px;
+}
+.contact-options > a,
+.contact-options > div {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 22px 0;
+  min-width: 0;
+}
+.contact-options svg {
+  color: var(--blue);
+  width: 20px;
+}
+.contact-options small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+.contact-options strong {
+  font-size: 1.05rem;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+.contact-options a:hover strong {
+  color: var(--blue);
+}
+.contact-note {
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  max-width: 350px;
+}
+.contact-note h3 {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+.contact-note p {
+  margin-top: 12px;
+  font-size: 0.87rem;
+  line-height: 1.65;
+}
+@media (max-width: 1150px) {
+  .contact-page {
+    gap: 50px;
+  }
+  .contact-copy h1 {
+    font-size: 4.2rem;
+  }
+}
+@media (max-width: 950px) {
+  .contact-page {
+    gap: 30px;
+  }
+  .contact-copy h1 {
+    font-size: 3.5rem;
+  }
+  .contact-options strong {
+    font-size: 0.91rem;
+  }
+}
+@media (max-width: 760px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .contact-copy {
+    position: static;
+  }
+  .contact-copy h1 {
+    font-size: 3.7rem;
+  }
+  .contact-copy > p:not(.eyebrow) {
+    max-width: 500px;
+    font-size: 1.04rem;
+  }
+  .contact-options {
+    margin-top: 25px;
+  }
+  .contact-options strong {
+    font-size: 1rem;
+  }
+  .contact-note {
+    max-width: 500px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-copy h1 {
+    font-size: 3.2rem;
+  }
+  .contact-options strong {
+    font-size: 0.93rem;
+  }
+  .contact-options > a,
+  .contact-options > div {
+    gap: 12px;
+  }
+}

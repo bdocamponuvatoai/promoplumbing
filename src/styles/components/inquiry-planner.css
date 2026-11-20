@@ -1,0 +1,338 @@
+.planner {
+  background: #f5f8fc;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px;
+  min-width: 0;
+}
+.planner-progress {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  gap: 16px;
+}
+.planner-progress li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+.planner-progress li > span {
+  display: grid;
+  place-items: center;
+  min-width: 23px;
+  width: 23px;
+  height: 23px;
+  background: #e1e7ef;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+.planner-progress li.active {
+  color: var(--blue);
+}
+.planner-progress li.active > span {
+  color: white;
+  background: var(--blue);
+}
+.planner h2 {
+  font-size: 2.15rem;
+  letter-spacing: -0.045em;
+  outline: none;
+}
+.planner-intro {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 17px 0 28px;
+}
+.planner fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.planner label:not(.choice),
+.planner legend {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 20px 0 9px;
+}
+.planner label span:not(.radio-mark) {
+  font-weight: 400;
+  color: var(--muted);
+}
+.planner label.choice > span:not(.radio-mark) {
+  color: var(--ink);
+  font-weight: 550;
+}
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.choice {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 13px;
+  cursor: pointer;
+  min-width: 0;
+}
+.choice > input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: 0;
+}
+.choice:has(input:focus-visible) {
+  outline: 3px solid #4179ff;
+  outline-offset: 3px;
+}
+.choice > svg {
+  width: 21px;
+  height: 21px;
+  color: var(--blue);
+}
+.choice.selected {
+  border-color: var(--blue);
+  background: #edf3ff;
+}
+.choice > span {
+  font-size: 0.88rem;
+}
+.radio-mark {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #9faec2;
+  border-radius: 50%;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.selected .radio-mark {
+  border: 4px solid var(--blue);
+}
+.planner input,
+.planner select,
+.planner textarea {
+  font-size: 0.95rem;
+}
+.planner .small {
+  margin: 17px 0 20px;
+}
+.planner form > .btn {
+  width: 100%;
+}
+.form-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.form-actions .btn {
+  flex-grow: 1;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.privacy-note {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 25px;
+}
+.privacy-note p {
+  font-size: 0.83rem;
+}
+.privacy-note svg {
+  color: var(--blue);
+  margin-top: 3px;
+}
+.review-details {
+  margin: 0 0 25px;
+}
+.review-details > div {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.review-details dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.review-details dd {
+  margin: 5px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.94rem;
+}
+.email-draft {
+  width: 100%;
+}
+.summary-tools {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.summary-tools button,
+.text-button {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  padding: 10px 0;
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 550;
+}
+.feedback {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--blue);
+  min-height: 24px;
+}
+@media (max-width: 1150px) {
+  .planner {
+    padding: 28px;
+  }
+}
+@media (max-width: 950px) {
+  .planner {
+    padding: 24px;
+  }
+  .planner-progress {
+    gap: 10px;
+  }
+  .planner-progress li {
+    font-size: 0.64rem;
+  }
+  .choice {
+    gap: 8px;
+    padding: 14px 10px;
+  }
+  .planner h2 {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 760px) {
+  .planner {
+    padding: 30px;
+  }
+  .planner-progress {
+    gap: 20px;
+  }
+  .planner-progress li {
+    font-size: 0.75rem;
+  }
+  .planner h2 {
+    font-size: 2.1rem;
+  }
+  .choice {
+    padding: 16px;
+  }
+  .choice > span {
+    font-size: 0.94rem;
+  }
+}
+@media (max-width: 480px) {
+  .planner {
+    padding: 23px 18px;
+    border-radius: 12px;
+  }
+  .planner-progress {
+    gap: 9px;
+    margin-bottom: 28px;
+  }
+  .planner-progress li {
+    font-size: 0.61rem;
+    gap: 5px;
+  }
+  .planner-progress li > span {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.62rem;
+  }
+  .planner h2 {
+    font-size: 1.9rem;
+  }
+  .choice {
+    padding: 14px 10px;
+    gap: 7px;
+  }
+  .choice > svg {
+    width: 18px;
+  }
+  .choice > span {
+    font-size: 0.86rem;
+  }
+  .planner input,
+  .planner select,
+  .planner textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  .planner select {
+    padding-right: 40px;
+  }
+  .planner .select-wrap > svg {
+    right: 12px;
+  }
+  .planner label:not(.choice) {
+    font-size: 0.82rem;
+  }
+  .form-actions {
+    gap: 12px;
+  }
+  .form-actions .btn {
+    font-size: 0.85rem;
+  }
+  .planner .btn {
+    font-size: 0.88rem;
+  }
+  .summary-tools {
+    gap: 12px;
+  }
+  .summary-tools button {
+    font-size: 0.8rem;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.planner-progress li,
+.planner-progress li > span {
+  font-size: 0.75rem;
+}
+.planner label:not(.choice),
+.planner legend,
+.summary-tools button,
+.text-button,
+.planner .btn {
+  font-size: 0.875rem;
+}
+.planner input,
+.planner select,
+.planner textarea {
+  font-size: 1rem;
+}
+.planner h2 {
+  scroll-margin-top: 130px;
+}
+@media (max-width: 480px) {
+  .planner-progress {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

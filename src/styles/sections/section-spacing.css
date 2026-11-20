@@ -1,0 +1,121 @@
+/*
+ * Section spacing. The responsive `.section` padding and every section's own
+ * padding overrides, kept in their original cascade order. These rules are
+ * order-coupled (same specificity), so they live together and load after
+ * the page partials. See styles/globals.css.
+ */
+.section {
+  padding: 112px 56px;
+}
+.services-section {
+  padding-bottom: 104px;
+}
+.home-story {
+  padding-top: 0;
+  padding-bottom: 112px;
+}
+.area-teaser {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.page-intro {
+  padding-top: 80px;
+  padding-bottom: 65px;
+}
+.service-directory {
+  padding-top: 0;
+}
+.detail-hero {
+  padding-top: 55px;
+  padding-bottom: 80px;
+}
+.detail-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.audience-hero {
+  padding-top: 60px;
+  padding-bottom: 75px;
+}
+.audience-details {
+  padding-top: 40px;
+}
+.prepare {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.about-story {
+  padding-top: 15px;
+}
+.about-values {
+  padding-top: 70px;
+  padding-bottom: 75px;
+}
+.area-page {
+  padding-top: 10px;
+}
+.contact-page {
+  padding-top: 65px;
+}
+.prose {
+  padding-top: 15px;
+}
+@media (max-width: 1150px) {
+  .section {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (max-width: 950px) {
+  .section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+  .home-story {
+    padding-top: 0;
+  }
+}
+@media (max-width: 760px) {
+  .section {
+    padding: 65px 24px;
+  }
+  .home-story {
+    padding-top: 0;
+  }
+  .page-intro {
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
+  .service-directory {
+    padding-top: 0;
+  }
+  .detail-hero {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+  .audience-hero {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+  .audience-details {
+    padding-top: 35px;
+  }
+  .about-story {
+    padding-top: 0;
+  }
+  .area-page {
+    padding-top: 0;
+  }
+  .contact-page {
+    padding-top: 45px;
+  }
+  .prose {
+    padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

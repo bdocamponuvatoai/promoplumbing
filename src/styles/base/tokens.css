@@ -1,0 +1,12 @@
+:root {
+  --font: var(--font-dm), "Arial", sans-serif;
+  --ink: #152335;
+  --muted: #536173;
+  --blue: #1958e8;
+  --blue-dark: #103fbc;
+  --pale: #eff4fb;
+  --line: #dbe2ea;
+  --mint: #a9e9dd;
+  --white: #fff;
+  --max: 1360px;
+}

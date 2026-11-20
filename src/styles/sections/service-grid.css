@@ -1,0 +1,161 @@
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.service-card {
+  border: 1px solid var(--line);
+  padding: 28px 28px 25px;
+  border-radius: 12px;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    transform 0.25s;
+}
+.service-card:hover {
+  background: var(--pale);
+  border-color: #b5c9e9;
+  transform: translateY(-4px);
+}
+.service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.icon-box {
+  height: 48px;
+  width: 48px;
+  background: #eef3ff;
+  color: var(--blue);
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+.round-plus {
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+.service-card h3 {
+  font-size: 1.48rem;
+  margin-bottom: 12px;
+}
+.service-card p {
+  font-size: 0.94rem;
+  min-height: 48px;
+  line-height: 1.55;
+  max-width: 240px;
+}
+.service-link {
+  display: block;
+  margin-top: 26px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+.filters button {
+  border: 1px solid var(--line);
+  padding: 10px 22px;
+  background: white;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  min-height: 44px;
+}
+.filters button[aria-pressed="true"] {
+  color: white;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+@media (max-width: 950px) {
+  .service-grid {
+    gap: 14px;
+  }
+  .service-card {
+    padding: 24px 20px;
+  }
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 760px) {
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .service-card {
+    padding: 24px;
+  }
+  .service-card-top {
+    margin-bottom: 25px;
+  }
+  .service-card h3 {
+    font-size: 1.4rem;
+  }
+  .service-card p {
+    min-height: 48px;
+    font-size: 0.91rem;
+  }
+  .service-link {
+    margin-top: 22px;
+  }
+  .filters {
+    gap: 8px;
+  }
+  .filters button {
+    padding: 10px 17px;
+    font-size: 0.86rem;
+  }
+}
+@media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 23px 24px;
+    position: relative;
+  }
+  .service-card-top {
+    margin-bottom: 23px;
+  }
+  .service-card h3 {
+    font-size: 1.48rem;
+  }
+  .service-card p {
+    min-height: 0;
+    max-width: none;
+    font-size: 0.95rem;
+  }
+  .service-link {
+    margin-top: 20px;
+  }
+  .filters button {
+    font-size: 0.81rem;
+    padding: 9px 15px;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.service-card p {
+  font-size: 1rem;
+}
+.filters button {
+  font-size: 0.875rem;
+}

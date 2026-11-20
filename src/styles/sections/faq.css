@@ -1,0 +1,89 @@
+.faq {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 100px;
+}
+.faq > div > p:not(.eyebrow) {
+  margin: 24px 0;
+}
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+.faq details {
+  border-bottom: 1px solid var(--line);
+}
+.faq summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  padding: 24px 0;
+  font-size: 1.05rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary svg {
+  margin-top: 3px;
+  color: var(--blue);
+  transition: transform 0.2s;
+}
+.faq details[open] summary svg {
+  transform: rotate(45deg);
+}
+.faq details p {
+  padding: 0 30px 25px 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+@media (max-width: 1150px) {
+  .faq {
+    gap: 60px;
+  }
+}
+@media (max-width: 950px) {
+  .faq {
+    gap: 45px;
+  }
+  .faq h2 {
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 760px) {
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .faq h2 {
+    font-size: 2.7rem;
+  }
+  .faq > div > p:not(.eyebrow) {
+    margin: 20px 0;
+  }
+  .faq summary {
+    font-size: 1rem;
+    padding: 22px 0;
+  }
+}
+@media (max-width: 480px) {
+  .faq h2 {
+    font-size: 2.5rem;
+  }
+  .faq summary {
+    font-size: 0.97rem;
+  }
+  .faq details p {
+    font-size: 0.92rem;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.faq details p {
+  font-size: 1rem;
+}

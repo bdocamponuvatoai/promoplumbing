@@ -1,0 +1,71 @@
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 55px;
+}
+.approach-grid > div {
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.approach-grid h3 {
+  font-size: 1.35rem;
+  margin: 20px 0 15px;
+}
+.approach-grid p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.approach-icon {
+  height: 46px;
+  width: 46px;
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  background: var(--pale);
+  border-radius: 50%;
+}
+.approach-icon svg {
+  width: 22px;
+}
+@media (max-width: 950px) {
+  .approach-grid {
+    gap: 28px;
+  }
+}
+@media (max-width: 760px) {
+  .approach-grid {
+    gap: 25px;
+    margin-top: 25px;
+  }
+  .approach-grid h3 {
+    font-size: 1.25rem;
+  }
+  .approach-grid p {
+    font-size: 0.91rem;
+  }
+}
+@media (max-width: 480px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .approach-grid > div {
+    padding-top: 24px;
+  }
+  .approach-grid h3 {
+    font-size: 1.4rem;
+    margin: 17px 0 12px;
+  }
+  .approach-grid p {
+    font-size: 0.97rem;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.approach-grid p {
+  font-size: 1rem;
+}

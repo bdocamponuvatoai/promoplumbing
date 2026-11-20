@@ -1,0 +1,26 @@
+.eyebrow {
+  color: var(--blue);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 23px;
+}
+.small {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .eyebrow {
+    font-size: 0.71rem;
+    margin-bottom: 18px;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.eyebrow {
+  font-size: max(0.75rem, 12px);
+}

@@ -1,0 +1,10 @@
+.select-wrap {
+  position: relative;
+}
+.select-wrap > svg {
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}

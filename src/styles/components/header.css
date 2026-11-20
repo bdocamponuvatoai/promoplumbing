@@ -1,0 +1,230 @@
+.topline {
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 9px max(4.2vw, 24px);
+  font-size: 0.78rem;
+  letter-spacing: 0.015em;
+}
+.topline > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.topline > a {
+  color: #d1deee;
+}
+.topline > a span {
+  margin-left: 20px;
+  color: white;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  z-index: 20;
+  border-bottom: 1px solid #edf0f5;
+}
+.nav-inner {
+  max-width: 1440px;
+  margin: auto;
+  padding: 17px 4.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  width: 204px;
+  flex-shrink: 0;
+}
+.brand img {
+  width: 100%;
+  height: auto;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-links > a {
+  font-size: 0.9rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+.nav-links > a:hover,
+.nav-links > a[aria-current] {
+  color: var(--blue);
+}
+.header-request {
+  padding: 12px 20px;
+  min-height: 48px;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-request {
+  display: none;
+}
+@media (max-width: 1150px) {
+  .nav-links {
+    gap: 20px;
+  }
+  .brand {
+    width: 180px;
+  }
+  .nav-inner {
+    gap: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .nav-links {
+    gap: 16px;
+  }
+  .nav-links > a {
+    font-size: 0.8rem;
+  }
+  .header-request {
+    padding: 10px 15px;
+    font-size: 0.82rem;
+  }
+  .brand {
+    width: 160px;
+  }
+  .nav-inner {
+    padding: 16px 30px;
+    gap: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .topline {
+    padding: 8px 24px;
+    font-size: 0.7rem;
+  }
+  .topline > a {
+    display: none;
+  }
+  .nav-inner {
+    padding: 12px 24px;
+    gap: 14px;
+  }
+  .brand {
+    width: 166px;
+  }
+  .header-request {
+    margin-left: auto;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 14px 20px #1424350a;
+    padding: 15px 24px 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links > a {
+    padding: 14px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links .mobile-request {
+    display: flex;
+    padding: 14px;
+    margin-top: 20px;
+    color: white;
+  }
+}
+@media (max-width: 480px) {
+  .topline {
+    padding-left: 20px;
+  }
+  .nav-inner {
+    padding: 12px 20px;
+  }
+  .header-request {
+    display: none;
+  }
+  .menu-toggle {
+    margin-left: auto;
+  }
+  .brand {
+    width: 166px;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.nav-links > a {
+  font-size: max(0.875rem, 14px);
+}
+@media (max-width: 480px) {
+  .topline {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .nav-inner {
+    padding: 15px 30px;
+  }
+  .header-request {
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .brand {
+    width: 180px;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 14px 20px #1424350a;
+    padding: 15px 30px 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links > a {
+    padding: 14px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links .mobile-request {
+    display: flex;
+    padding: 14px;
+    margin-top: 20px;
+    color: #fff;
+  }
+}

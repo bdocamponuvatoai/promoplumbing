@@ -1,0 +1,149 @@
+footer {
+  max-width: 1480px;
+  margin: auto;
+  padding: 60px 4.2% 24px;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--line);
+}
+.footer-top p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.footer-phone {
+  font-size: clamp(1.3rem, 2vw, 1.85rem);
+  font-weight: 550;
+  letter-spacing: -0.035em;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.15fr;
+  gap: 40px;
+  padding: 45px 0;
+}
+.footer-grid h3 {
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  margin-bottom: 18px;
+  font-weight: 650;
+}
+.footer-grid a:not(.text-link),
+.footer-grid p {
+  display: block;
+  font-size: 0.86rem;
+  margin-bottom: 8px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.footer-grid a:hover {
+  color: var(--blue);
+}
+.footer-grid .text-link {
+  margin-top: 14px;
+  font-size: 0.85rem;
+}
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  display: flex;
+  gap: 22px;
+  font-size: 0.74rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.footer-bottom > span:first-child {
+  margin-right: auto;
+}
+@media (max-width: 1150px) {
+  .footer-grid {
+    gap: 25px;
+  }
+}
+@media (max-width: 950px) {
+  .footer-top p {
+    font-size: 0.95rem;
+  }
+  .footer-top img {
+    width: 190px;
+  }
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+  .footer-note {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  footer {
+    padding: 40px 24px 24px;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 32px;
+  }
+  .footer-top p {
+    display: none;
+  }
+  .footer-phone {
+    font-size: 1.5rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 30px;
+    padding: 32px 0;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1/-1;
+  }
+  .footer-grid a:not(.text-link),
+  .footer-grid p {
+    font-size: 0.9rem;
+  }
+  .footer-bottom {
+    gap: 15px 25px;
+    font-size: 0.72rem;
+  }
+  .footer-bottom > span:first-child {
+    width: 100%;
+  }
+  .footer-bottom > span:last-child {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .footer-grid {
+    column-gap: 20px;
+  }
+  .footer-grid a:not(.text-link),
+  .footer-grid p {
+    font-size: 0.84rem;
+  }
+}
+
+/*
+ * Readability floor and late overrides. These intentionally come after
+ * the breakpoints above (later wins at equal specificity). Keep them last.
+ */
+.footer-bottom {
+  font-size: 0.75rem;
+}
+.footer-grid a:not(.text-link),
+.footer-grid p {
+  font-size: 0.875rem;
+}
